@@ -6,6 +6,15 @@
 trigger:
 - master
 
+schedules:
+- cron: "0 4 * * *"
+  displayName: 10 CST build
+  branches:
+    include:
+    - master
+
+  always: true
+
 pool:
   vmImage: 'vs2017-win2016'
 
