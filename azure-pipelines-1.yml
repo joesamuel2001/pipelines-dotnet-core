@@ -3,15 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
+#trigger:
+#- master
 
 schedules:
-- cron: "0 4 * * *"
-  displayName: 10 CST build
+- cron: "15 4 * * *"
+  displayName: 10:15 CST build
   branches:
     include:
     - master
+    - Joe-azure-pipeline
 
   always: true
 
