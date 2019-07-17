@@ -7,13 +7,13 @@
 #- master
 
 schedules:
-- cron: "35 4 * * *"
-  displayName: 10:35 CST build
+- cron: "45 7 * * *"
+  displayName: 2:45 CST build
   branches:
     include:
       - Joe-azure-pipeline
 
-  always: true
+  always: false
 
 pool:
   vmImage: 'vs2017-win2016'
