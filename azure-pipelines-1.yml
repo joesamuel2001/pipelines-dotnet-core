@@ -6,15 +6,6 @@
 trigger:
 - Joe-azure-pipeline
 
-# schedules:
-# - cron: "45 7 * * *"
-#   displayName: 2:45 CST build
-#   branches:
-#     include:
-#       - Joe-azure-pipeline
-
-#   always: false
-
 pool:
   vmImage: 'vs2017-win2016'
 
