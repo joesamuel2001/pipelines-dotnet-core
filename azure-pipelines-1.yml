@@ -6,25 +6,30 @@
 trigger:
 - Joe-azure-pipeline
 
-pool:
-  vmImage: 'vs2017-win2016'
-
 stages:
 - stage: Build
   jobs:
   - job: BuildJob
+    pool:
+      vmImage: 'vs2017-win2016'
     steps:
     - script: echo Building!
 - stage: Test
   jobs:
   - job: TestOnWindows
+    pool:
+      vmImage: 'vs2017-win2016'
     steps:
     - script: echo Testing on Windows!
   - job: TestOnLinux
+    pool:
+      vmImage: 'vs2017-win2016'
     steps:
     - script: echo Testing on Linux!
 - stage: Deploy
   jobs:
   - job: Deploy
+    pool:
+      vmImage: 'vs2017-win2016'
     steps:
     - script: echo Deploying the code!
