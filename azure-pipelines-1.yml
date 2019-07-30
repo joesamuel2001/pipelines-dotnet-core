@@ -6,6 +6,11 @@
 trigger:
 - Joe-azure-pipeline
 
+variables:
+  runtime: 'win-x64'
+  buildConfiguration: 'Release'
+  framework: 'netcoreapp2.2'
+
 stages:
 - stage: Build
   jobs:
