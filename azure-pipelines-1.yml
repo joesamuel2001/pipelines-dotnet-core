@@ -29,12 +29,6 @@ stages:
     steps:
     - script: echo Testing on Windows!
 
-  - job: TestOnLinux
-    pool:
-      vmImage: 'vs2017-win2016'
-    steps:
-    - script: echo Testing on Linux!
-
 - stage: Deploy
   jobs:
   - job: Deploy
