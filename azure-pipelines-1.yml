@@ -3,20 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
-variables:
-  runtime: 'win-x64'
-  buildConfiguration: 'Release'
-  framework: 'netcoreapp2.2'
-
 pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- task: PowerShell@2
-  displayName: 'Supervisor Build'
-  inputs:    
-    filepath: './Scripts/supervisor.build.ps1'
-    arguments: '-BuildDistrobution $(BuildDistrobution)'
+- task: DotNetCoreInstaller@0
+  inputs:
+    version: '2.2'
