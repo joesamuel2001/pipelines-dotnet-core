@@ -26,7 +26,7 @@ stages:
         displayName: 'Supervisor DotNet Restore, Build, Publish PowerShell@2'
          inputs: 
          filepath: './Scripts/supervisor.build.ps1'
-         #arguments: '-BuildDistrobution $(BuildDistrobution)'
+         arguments:'-BuildDistrobution $(BuildDistrobution)'
          
 - stage: Test
   jobs:
