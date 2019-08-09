@@ -24,12 +24,5 @@ steps:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
-# Specify test result
-- script: dotnet test <test-project> --logger trx --collect "Code coverage"
-- task: PublishTestResults@2
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
-
 # Publish Artifacts
 - task: PublishBuildArtifacts@1
